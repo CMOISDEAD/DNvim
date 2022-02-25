@@ -60,6 +60,8 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "tpope/vim-surround"
   use "mattn/emmet-vim"
+  use "sunjon/shade.nvim"
+  use "ggandor/lightspeed.nvim"
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
