@@ -1,30 +1,14 @@
+local h = require("user.header")
+math.randomseed(os.time())
+
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
 	return
 end
 
 local dashboard = require("alpha.themes.dashboard")
-dashboard.section.header.val = {
-[[=================     ===============     ===============   ========  ========]],
-[[\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //]],
-[[||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||]],
-[[|| . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||]],
-[[||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||]],
-[[|| . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||]],
-[[||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||]],
-[[|| . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||]],
-[[||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||]],
-[[||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||]],
-[[||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||]],
-[[||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||]],
-[[||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||]],
-[[||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||]],
-[[||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||]],
-[[||.=='    _-'                                                     `' |  /==.||]],
-[[=='    _-'                        N E O V I M                         \/   `==]],
-[[\   _-'                                                                `-_   /]],
-[[`''                                                                        ``']],
-}
+dashboard.section.header.val = h.randomHeader(math.random(0, 9))
+
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
@@ -36,7 +20,7 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
--- NOTE: requires the fortune-mod package to work
+	-- NOTE: requires the fortune-mod package to work
 	-- local handle = io.popen("fortune")
 	-- local fortune = handle:read("*a")
 	-- handle:close()
