@@ -63,6 +63,7 @@ return packer.startup(function(use)
 	use("sunjon/shade.nvim")
 	use("mg979/vim-visual-multi")
 	use("norcalli/nvim-colorizer.lua")
+	use("folke/todo-comments.nvim")
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

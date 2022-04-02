@@ -39,6 +39,11 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
+-- Run code
+keymap("n", "<F5>", ":!javac %<CR>", opts)
+keymap("n", "<F6>", ":TermExec cmd='time java -cp %:p:h %:t:r'<CR>", opts)
+keymap("n", "<F7>", ":TermExec cmd='javac % && time java -cp %:p:h %:t:r'<CR>", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
