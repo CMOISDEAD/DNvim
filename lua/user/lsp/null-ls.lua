@@ -14,7 +14,7 @@ null_ls.setup({
 		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.prettierd,
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.stylua,
+		-- formatting.stylua,
     -- diagnostics.flake8
 	},
   on_attach = function(client)

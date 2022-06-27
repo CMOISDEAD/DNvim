@@ -64,12 +64,18 @@ return packer.startup(function(use)
 	use("mg979/vim-visual-multi")
 	use("norcalli/nvim-colorizer.lua")
 	use("folke/todo-comments.nvim")
-	use("lervag/vimtex")
+  use("nvim-neorg/neorg")
 
 	-- Colorschemes
 	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
 	use("lunarvim/darkplus.nvim")
 	use("ellisonleao/gruvbox.nvim")
+  use("navarasu/onedark.nvim")
+  use("jacoborus/tender.vim")
+  use("srcery-colors/srcery-vim")
+  use("folke/tokyonight.nvim")
+  use("cocopon/iceberg.vim")
+  use("nanotech/jellybeans.vim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin

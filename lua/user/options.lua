@@ -44,9 +44,8 @@ end
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
-vim.cmd([[let g:user_emmet_leader_key='<C-Z>']])
+vim.cmd([[let g:user_emmet_leader_key='<C-z>']])
 vim.cmd([[let g:gruvbox_contrast_dark='hard']])
-vim.cmd([[let g:vimtex_view_method = 'zathura']])
 
 vim.g.transparent_background = false
 vim.g.italic_comments = true
