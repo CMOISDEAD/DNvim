@@ -159,12 +159,6 @@ local mappings = {
 			"Workspace Symbols",
 		},
 	},
-  r = {
-    name = "Run",
-    c = { "<cmd>RunCode<cr>" },
-    C = { "<cmd>RunClose<cr>" },
-    f = { "<cmd>RunFile<cr>" },
-  },
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
